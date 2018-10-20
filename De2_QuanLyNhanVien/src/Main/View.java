@@ -41,6 +41,10 @@ public class View extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -53,14 +57,25 @@ public class View extends javax.swing.JFrame {
         txtDob = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
         txtAddress = new javax.swing.JTextField();
-        txtDepartment = new javax.swing.JTextField();
         txtFigureSalary = new javax.swing.JTextField();
         txtExp = new javax.swing.JTextField();
         txtSalary = new javax.swing.JTextField();
         ckbNam = new javax.swing.JRadioButton();
         ckbNu = new javax.swing.JRadioButton();
+        comboPB = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+
+        jRadioButtonMenuItem1.setSelected(true);
+        jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
+
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
+
+        jCheckBoxMenuItem2.setSelected(true);
+        jCheckBoxMenuItem2.setText("jCheckBoxMenuItem2");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,6 +106,8 @@ public class View extends javax.swing.JFrame {
         buttonGroup1.add(ckbNu);
         ckbNu.setText("nu");
 
+        comboPB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Thiet bi", "nhan su", "R&D", "Kinh doanh" }));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -111,14 +128,14 @@ public class View extends javax.swing.JFrame {
                     .addComponent(txtDob, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDepartment, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtFigureSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtExp, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(ckbNam)
                         .addGap(27, 27, 27)
-                        .addComponent(ckbNu)))
+                        .addComponent(ckbNu))
+                    .addComponent(comboPB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25))
         );
         jPanel1Layout.setVerticalGroup(
@@ -141,11 +158,11 @@ public class View extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(ckbNam)
                     .addComponent(ckbNu))
-                .addGap(20, 20, 20)
+                .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txtDepartment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
+                    .addComponent(comboPB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(txtFigureSalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -209,7 +226,6 @@ public class View extends javax.swing.JFrame {
             pw = new PrintWriter("nhanvien.dat");
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             for (NhanVien nhanVien : listNhanVien) {
-                StringBuilder builder = new StringBuilder();
                 String line = nhanVien.getHoTen()
                         +"$"+sdf.format(nhanVien.getNgaySinh())
                         +"$"+nhanVien.getDiaChi()
@@ -232,7 +248,7 @@ public class View extends javax.swing.JFrame {
         try {
             NhanVien nv = new NhanVien(
                     PhongBan.compare(
-                            txtDepartment.getText()),
+                            comboPB.getSelectedItem().toString()),
                     Integer.parseInt(txtFigureSalary.getText()),
                     Integer.parseInt(txtExp.getText()),
                     Double.parseDouble(txtSalary.getText()),
@@ -296,8 +312,12 @@ public class View extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JRadioButton ckbNam;
     private javax.swing.JRadioButton ckbNu;
+    private javax.swing.JComboBox<String> comboPB;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -307,8 +327,8 @@ public class View extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtDepartment;
     private javax.swing.JTextField txtDob;
     private javax.swing.JTextField txtExp;
     private javax.swing.JTextField txtFigureSalary;

@@ -4,6 +4,39 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
     </Component>
+    <Component class="javax.swing.JRadioButtonMenuItem" name="jRadioButtonMenuItem1">
+      <Properties>
+        <Property name="selected" type="boolean" value="true"/>
+        <Property name="text" type="java.lang.String" value="jRadioButtonMenuItem1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBoxMenuItem" name="jCheckBoxMenuItem1">
+      <Properties>
+        <Property name="selected" type="boolean" value="true"/>
+        <Property name="text" type="java.lang.String" value="jCheckBoxMenuItem1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBoxMenuItem" name="jCheckBoxMenuItem2">
+      <Properties>
+        <Property name="selected" type="boolean" value="true"/>
+        <Property name="text" type="java.lang.String" value="jCheckBoxMenuItem2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBox1">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -76,7 +109,6 @@
                       <Component id="txtDob" min="-2" pref="423" max="-2" attributes="0"/>
                       <Component id="txtName" min="-2" pref="423" max="-2" attributes="0"/>
                       <Component id="txtAddress" min="-2" pref="423" max="-2" attributes="0"/>
-                      <Component id="txtDepartment" min="-2" pref="423" max="-2" attributes="0"/>
                       <Component id="txtFigureSalary" min="-2" pref="423" max="-2" attributes="0"/>
                       <Component id="txtExp" min="-2" pref="423" max="-2" attributes="0"/>
                       <Component id="txtSalary" min="-2" pref="423" max="-2" attributes="0"/>
@@ -85,6 +117,7 @@
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           <Component id="ckbNu" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="comboPB" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
@@ -114,12 +147,12 @@
                       <Component id="ckbNam" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ckbNu" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtDepartment" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="comboPB" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtFigureSalary" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -185,8 +218,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtAddress">
         </Component>
-        <Component class="javax.swing.JTextField" name="txtDepartment">
-        </Component>
         <Component class="javax.swing.JTextField" name="txtFigureSalary">
         </Component>
         <Component class="javax.swing.JTextField" name="txtExp">
@@ -211,6 +242,21 @@
             </Property>
             <Property name="text" type="java.lang.String" value="nu"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboPB">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Thiet bi"/>
+                <StringItem index="1" value="nhan su"/>
+                <StringItem index="2" value="R&amp;D"/>
+                <StringItem index="3" value="Kinh doanh"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
